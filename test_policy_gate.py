@@ -75,3 +75,10 @@ class AuditTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class PilotFailBehavior(unittest.TestCase):
+    """Deliberate failing test: pilot evidence that the verify gate can fail."""
+
+    def test_deliberate_failure_for_pilot(self):
+        self.assertEqual("pilot", "failure")
